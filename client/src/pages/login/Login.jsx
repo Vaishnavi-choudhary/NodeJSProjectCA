@@ -25,31 +25,35 @@ export default function Login() {
 
   return (
     <div className="login">
-      <span className="loginTitle">Login</span>
-      <form className="loginForm" onSubmit={handleSubmit}>
-        <label>Username</label>
-        <input
-          type="text"
-          className="loginInput"
-          placeholder="Enter your username..."
-          ref={userRef}
-        />
-        <label>Password</label>
-        <input
-          type="password"
-          className="loginInput"
-          placeholder="Enter your password..."
-          ref={passwordRef}
-        />
-        <button className="loginButton" type="submit" disabled={isFetching}>
-          Login
-        </button>
-      </form>
-      <button className="loginRegisterButton">
-        <Link className="link" to="/register">
-          Register
-        </Link>
-      </button>
+      <div className="logincard">
+        <span className="loginTitle">Login👩🏻‍💻</span>
+        <form className="loginForm" onSubmit={handleSubmit}>
+          <label>Username : </label>
+          <input
+            type="text"
+            className="loginInput"
+            placeholder="Enter username"
+            ref={userRef}
+            required
+          />
+          <label>Password : </label>
+          <input
+            type="password"
+            className="loginInput"
+            placeholder="Enter password"
+            ref={passwordRef}
+            required
+          />
+          <button className="loginButton" type="submit" disabled={isFetching}>
+            Login
+          </button>
+        </form>
+          <p className = "registertext">Create new account ? &nbsp;
+            <Link to="/register" style={{display: 'inline-block', textDecoration : "none"}}>
+              Register
+            </Link>
+          </p>
+      </div>
     </div>
   );
 }

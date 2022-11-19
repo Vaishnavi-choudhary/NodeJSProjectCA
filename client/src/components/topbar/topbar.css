@@ -8,6 +8,8 @@
   align-items: center;
   font-family: "Josefin Sans", sans-serif;
   z-index: 999;
+  padding: 50px 0px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .topLeft,
@@ -48,8 +50,9 @@
 .topListItem {
   margin-right: 20px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   cursor: pointer;
+  position: relative;
 }
 
 .topSearchIcon {
@@ -57,4 +60,20 @@
   color: #666;
   cursor: pointer;
   margin-left: 15px;
+}
+.topListItem:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.topListItem:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

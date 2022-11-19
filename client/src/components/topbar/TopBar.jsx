@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./topbar.css";
 import avatar from "../../assets/avatar.jpg"
+import logo from "../../assets/logo.png"
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
@@ -14,31 +15,20 @@ export default function TopBar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-twitter-square"></i>
-        <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
+      <Link to = "/">
+        <img src = {logo} style = {{width : "200px", margin : "10px 0px"}}/>
+      </Link>
       </div>
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
             <Link className="link" to="/">
-              HOME
-            </Link>
-          </li>
-          <li className="topListItem">
-            <Link className="link" to="/">
-              ABOUT
-            </Link>
-          </li>
-          <li className="topListItem">
-            <Link className="link" to="/">
-              CONTACT
+              🏠HOME
             </Link>
           </li>
           <li className="topListItem">
             <Link className="link" to="/write">
-              WRITE
+              WRITE-BLOG
             </Link>
           </li>
           <li className="topListItem" onClick={handleLogout}>
@@ -55,17 +45,16 @@ export default function TopBar() {
           <ul className="topList">
             <li className="topListItem">
               <Link className="link" to="/login">
-                LOGIN
+                LOGIN 👩🏻‍💻
               </Link>
             </li>
             <li className="topListItem">
               <Link className="link" to="/register">
-                REGISTER
+                REGISTER 🖊
               </Link>
             </li>
           </ul>
         )}
-        <i className="topSearchIcon fas fa-search"></i>
       </div>
     </div>
   );

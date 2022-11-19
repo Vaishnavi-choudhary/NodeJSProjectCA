@@ -5,18 +5,30 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
+      rgba(1, 1, 1, 0.5),
+      rgba(0, 0, 0, 0.5)
     ),
-    url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    url("../../assets/login.jpeg");
   background-size: cover;
 }
-
+.logincard{
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  align-items: center;
+  flex-direction: column;
+  padding : 20px 30px;
+  background-color : #fff;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 .loginTitle {
   font-size: 50px;
+  font-weight: 700;
 }
 
 .loginForm {
+  width : 100%;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -29,13 +41,14 @@
 .loginInput {
   padding: 10px;
   background-color: white;
-  border: none;
+  border: 1px solid black;
+  border-radius: 6px;
 }
 
 .loginButton {
   margin-top: 20px;
   cursor: pointer;
-  background-color: lightcoral;
+  background-color: rgb(96, 173, 244);
   border: none;
   color: white;
   border-radius: 10px;
@@ -57,4 +70,8 @@
   padding: 10px;
   color: white;
   border-radius: 10px;
+}
+
+.registertext{
+  margin : 10px 0px;
 }

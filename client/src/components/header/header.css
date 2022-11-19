@@ -1,5 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Cedarville+Cursive:regular);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 .header {
-  margin-top: 60px;
+  /* margin-top: 60px; */
+  position: relative;
 }
 
 .headerTitles {
@@ -8,6 +11,19 @@
   align-items: center;
   font-family: "Lora", serif;
   color: #444;
+  position : absolute;
+  left : 50px;
+  top : 30%;
+  z-index: 10;
+  width : 300px;
+}
+.headerTitles p{
+  font-size: 45px;
+  font-family: 'Cedarville Cursive', cursive;
+}
+.headerTitles span{
+  font-size: 15px;
+  font-family: 'Poppins', cursive;
 }
 
 .headerTitleSm {
@@ -27,4 +43,11 @@
     height: 200px;
     margin-top: 80px;
     object-fit: cover;
+}
+.carousel-inner{
+  height : 400px!important;
+  object-fit: center;
+}
+.carousel-inner img{
+  object-fit: center;
 }

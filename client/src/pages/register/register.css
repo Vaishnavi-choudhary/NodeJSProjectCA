@@ -5,18 +5,20 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
+      rgba(24, 24, 24, 0.5),
+      rgba(30, 30, 30, 0.5)
     ),
-    url("https://images.pexels.com/photos/317355/pexels-photo-317355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    url("../../assets//register.jpeg");
   background-size: cover;
 }
 
 .registerTitle {
   font-size: 50px;
+  font-weight: 700;
 }
 
 .registerForm {
+  width: 100%;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -29,13 +31,14 @@
 .registerInput {
   padding: 10px;
   background-color: white;
-  border: none;
+  border: 1px solid black;
+  border-radius: 6px;
 }
 
 .registerButton {
   margin-top: 20px;
   cursor: pointer;
-  background-color: teal;
+  background-color: rgb(96, 173, 244);
   border: none;
   color: white;
   border-radius: 10px;
